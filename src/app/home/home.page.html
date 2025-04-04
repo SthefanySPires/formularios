@@ -1,20 +1,261 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-list>
+  <ion-item>
+    <ion-input label="Nome"></ion-input>
+  </ion-item>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item>
+    <ion-input label="Nome da sua empresa" placeholder="Vivo"></ion-input>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-item>
+    <ion-input label="Idade" value="35"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Sobrenome" value="Madison" [readonly]="true"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Entrada desabilitada" value="Não vai conseguir inserir nada" [disabled]="true"></ion-input>
+  </ion-item>
+</ion-list>
+
+
+<ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Motivo da consulta" placeholder="..."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Idade do paciente" type="number" placeholder="000"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="CPF do paciente" type="password" value="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Email do paciente" type="email" placeholder="email@gmail.com"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Telefone do paciente" type="tel" placeholder="(00) 000000000"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-list>
+
+
+<ion-list>
+  <ion-item>
+    <ion-input label="Nome do cliente" placeholder="Digite o nome do cliente"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Data do pedido" labelPlacement="fixed" placeholder="Escolha a data do pedido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Tipo de prato" labelPlacement="stacked" placeholder="Informe o tipo de prato"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Observações" labelPlacement="floating" placeholder="Adicione observações especiais"></ion-input>
+  </ion-item>
+</ion-list>
+
+
+<ion-list>
+  <ion-item>
+    <ion-input labelPlacement="floating" value="hi@ionic.io">
+      <div slot="label">Email <ion-text color="danger">(Required)</ion-text></div>
+    </ion-input>
+  </ion-item>
+</ion-list>
+
+
+<ion-list>
+  <ion-item>
+    <ion-input labelPlacement="floating" value="cliente@loja.com">
+      <div slot="label">Email <ion-text color="danger">(Obrigatório)</ion-text></div>
+    </ion-input>
+  </ion-item>
+</ion-list>
+
+
+<ion-list>
+  <ion-item>
+    <ion-input aria-label="Nome do produto" value="Camiseta Básica"></ion-input>
+  </ion-item>
+</ion-list>
+
+
+<ion-list>
+  <ion-item>
+    <ion-input
+      label="Nome completo"
+      labelPlacement="stacked"
+      [clearInput]="true"
+      placeholder="Digite seu nome para limpar o campo"
+      value="João Silva"
+    >
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="Data de chegada"
+      labelPlacement="stacked"
+      [clearOnEdit]="true"
+      placeholder="Escolha a data de chegada, depois digite novamente para limpar"
+    >
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="Senha do Wi-Fi"
+      labelPlacement="stacked"
+      type="password"
+      placeholder="Digite sua senha, saia do campo e volte para limpar"
+    >
+    </ion-input>
+  </ion-item>
+</ion-list>
+
+
+<ion-input label="Nome do cliente" label-placement="floating" fill="solid" placeholder="Digite seu nome"></ion-input>
+
+<br />
+
+<ion-input label="Telefone de contato" label-placement="floating" fill="outline" placeholder="Digite seu telefone"></ion-input>
+
+
+<ion-input
+  type="email"
+  fill="solid"
+  label="Email"
+  labelPlacement="floating"
+  helperText="Digite um email válido"
+  errorText="Email inválido"
+  ngModel
+  email
+></ion-input>
+
+
+<ion-input
+  label="Descrição do produto"
+  labelPlacement="floating"
+  [counter]="true"
+  maxlength="200"
+></ion-input>
+
+
+<ion-list>
+  <ion-item>
+    <ion-input label="Comentário" placeholder="Digite seu comentário"></ion-input>
+  </ion-item>
+
+  <div class="ion-padding-start">
+    <ion-input label="Código promocional" [counter]="true" maxlength="20"></ion-input>
   </div>
-</ion-content>
+</ion-list>
+
+
+
+<ion-list>
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="Email" placeholder="email@dominio.com">
+      <ion-icon slot="start" name="mail" aria-hidden="true"></ion-icon>
+      <ion-button fill="clear" slot="end" aria-label="Mostrar/ocultar">
+        <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+      </ion-button>
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="Senha" type="password" placeholder="********">
+      <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+      <ion-button fill="clear" slot="end" aria-label="Mostrar/ocultar senha">
+        <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+      </ion-button>
+    </ion-input>
+  </ion-item>
+</ion-list>
+
+
+<ion-input aria-label="Nome do cliente" color="primary" placeholder="Digite o nome do cliente"></ion-input>
+<ion-input aria-label="Email do cliente" color="secondary" placeholder="Digite o email do cliente"></ion-input>
+<ion-input aria-label="Telefone do cliente" color="tertiary" placeholder="Digite o telefone do cliente"></ion-input>
+<ion-input aria-label="Endereço do cliente" color="success" placeholder="Digite o endereço do cliente"></ion-input>
+<ion-input aria-label="CEP" color="warning" placeholder="Digite o CEP"></ion-input>
+<ion-input aria-label="Data de nascimento" color="danger" placeholder="Digite a data de nascimento"></ion-input>
+<ion-input aria-label="Cidade" color="light" placeholder="Digite a cidade"></ion-input>
+<ion-input aria-label="Estado" color="medium" placeholder="Digite o estado"></ion-input>
+<ion-input aria-label="Observações" color="dark" placeholder="Digite observações adicionais"></ion-input>
+
+
+<ion-input
+  aria-label="Comentário do usuário"
+  placeholder="Digite seu comentário"
+  class="custom"
+  helperText="Texto de ajuda: Máximo de 20 caracteres"
+  [counter]="true"
+  [maxlength]="20"
+></ion-input>
+
+
+<ion-item>
+  <ion-label position="floating">Nome completo:</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-input label="Nome completo do aluno:" label-placement="floating"></ion-input>
+</ion-item>
+
+
+<ion-range labelPlacement="start" label="Nota Inicial"></ion-range>
+
+<br />
+
+<ion-range labelPlacement="end" label="Nota Final"></ion-range>
+
+<br />
+
+<ion-range labelPlacement="fixed" label="Nota Máxima"></ion-range>
+
+<br />
+
+<ion-range labelPlacement="stacked" label="Nota Atual"></ion-range>
+
+
+<ion-range>
+  <div slot="label">Avaliação com <ion-text color="primary">HTML customizado</ion-text></div>
+</ion-range>
+
+
+<ion-range aria-label="Nota Final"></ion-range>
+
+
+<ion-range aria-label="Temperature">
+  <ion-icon slot="start" name="snow-outline"></ion-icon>
+  <ion-icon slot="end" name="sunny-outline"></ion-icon>
+</ion-range>
+
+
+<ion-range aria-label="Faixa de Avaliação" [dualKnobs]="true" [value]="{ lower: 20, upper: 80 }"></ion-range>
+
+
+<ion-range aria-label="Faixa de Temperatura do Pão" [value]="50" [pin]="true"></ion-range>
+
+<ion-range
+  aria-label="Faixa de Doçura do Pão"
+  [min]="0"
+  [max]="10"
+  [value]="5"
+  [pin]="true"
+  [ticks]="true"
+  [snaps]="true"
+></ion-range>
+  
